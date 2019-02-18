@@ -1,0 +1,327 @@
+/* Required for full background image */
+
+html,
+body,
+header,
+.view {
+  height: 70%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 500px;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 500px;
+  }
+}
+
+.pie{
+  margin-bottom: 32px;
+  background-color: #000 !important;
+}
+.separador a{
+  margin: 35px 5px 5px 5px;
+  color: #fff;
+}
+
+.btn .fa {
+  margin-left: 3px;
+}
+
+.top-nav-collapse {
+  background-color: #000 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+background: transparent !important;
+}
+
+@media (max-width: 991px) {
+.navbar:not(.top-nav-collapse) {
+background: #000 !important;
+}
+}
+
+.btn-white {
+color: black !important;
+}
+
+h6 {
+line-height: 1.7;
+}
+
+.rgba-gradient {
+background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+}
+
+.chat-container{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 999 !important;
+}
+.chat-button{
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+  padding: 4px 0;
+  background-color: black;
+  text-align: center;
+  color: aquamarine;
+}
+.chat-content{
+  margin: 0;
+  padding: 0;
+  background-color: aquamarine;
+  display: none;
+}
+
+/* 
+Styles de los botones telefónicos
+*/
+a.btn-llamar{
+  text-decoration: none;
+  color: aquamarine;
+  margin-left: 15px;
+  padding: 10x 15px;
+  border-radius: 5px;
+  transition: ease-in .4s;
+}
+a.btn-llamar:hover{
+  background: red;
+  color: #fff;
+}
+
+/** 
+ * Styles de la notificación de la cabecera.*/
+
+
+#notificacion {
+
+	background-color: #291360;
+	color: white;
+	height: 50px;
+	width: 100%;
+	font-size: 20px;
+	text-align: center; 
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin-top: 95px;
+	padding-top: 5px;
+  display:none;
+  z-index: 998;
+
+}
+
+.pedido {
+	
+	background-color: #21EC2F;
+	display: inline-block;
+	width: 150px;
+	border-radius: 5px; 
+	font-weight: bold;
+	margin-left: 10px;
+	border: 1px solid #fff;
+	padding: 0 5px;
+
+}
+
+
+a {
+
+	text-decoration: none;
+	color: white;
+	text-shadow: 1px 1px 1px #000;
+
+} 
+
+#cerrarCabeza {
+	
+	background-color: #39344A;
+	display: inline-block;
+	width: 100px;
+	border-radius: 5px;
+	float: right;
+	margin-right: 25px;
+	font-weight: bold;
+
+}
+
+#cerrarCabeza:hover {
+
+	background-color: #000B1B;
+	outline: 3px solid #000B1B;
+	outline-offset: 1.2px;
+
+}
+
+/* BOTON */
+
+$color: #2194E0;
+
+@keyframes sheen {
+  0% {
+    transform: skewY(-45deg) translateX(0);
+  }
+  100% {
+    transform: skewY(-45deg) translateX(12.5em);
+  }
+}
+
+.wrapper {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button {
+  padding: 0.75em 2em;
+  text-align: center;
+  text-decoration: none;
+  color: $color;
+  border: 2px solid $color;
+  font-size: 24px;
+  display: inline-block;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    background-color: rgba(255,255,255,0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-45deg) translateX(0);
+    transition: none;
+  }
+  &:hover {
+    background-color: $color;
+    color: #fff;
+    border-bottom: 4px solid darken($color, 10%);
+    &:before {
+      transform: skewX(-45deg) translateX(13.5em);
+     transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+/* 
+IMAGEN DE PORTADA EN MOVIMIENTO
+*/
+
+.container-portada{
+  width: 100%;
+  height: 450px;
+  /* position: relative;
+  background-image: url("/img/portada.jpg");
+  background-repeat: no-repeat;
+  background-size: 500%;
+  animation: movimiento 20s infinite linear alternate;   */
+  
+}
+
+@keyframes movimiento{
+  from{
+      background-position: bottom left;
+  }to{
+      background-position: top right;
+  }
+}
+
+
+.capa-gradient{
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  background: -webkit-linear-gradient(left, black, #0094cc);
+  opacity: 0.7;
+}
+
+.container-details{
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+}
+
+
+.details{
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  top: 120px;
+  color: white;
+}
+
+.details h1, h2{
+  font-size: 40px;
+  font-weight: 100;
+  margin-left: 10px;
+}
+
+.details p{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 100;
+  margin-left: 10px;
+}
+
+.details button{
+  padding: 10px 20px;
+  font-size: 16px;
+  background: none;
+  border-style: none;
+  border: 1px solid white;
+  color: white;
+  margin-top: 20px;
+  transition: background 300ms;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.details button:hover{
+  background: white;
+  color: black;
+}
+
+/**
+ * BOTON SUBIR
+ */
+.boton-subir i{
+  color: #fff;
+  border: 2px solid #ffbdaf;
+  border-radius: 50px;
+  font-size: 14px;
+  padding: 15px;
+}
+.boton-subir i:hover{
+  color: #FFBDAF;
+  border-radius: 50px;
+  border: 2px solid #b7cdc0;
+}
